@@ -1,106 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+body{
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+font-family:'Poppins',sans-serif;
 
-</head>
-<body>
+background:linear-gradient(135deg,#ffd6e8,#fff4f9);
 
-<header>
+color:#555;
 
-<nav>
+}
 
-<div class="logo">
-🌸 My Portfolio
-</div>
+/* Header */
 
-<ul>
+header{
 
-<li><a href="index.html" class="active">Home</a></li>
+background:#ffb6d9;
 
-<li><a href="education.html">Education</a></li>
+padding:30px;
 
-<li><a href="personal.html">Personal</a></li>
+text-align:center;
 
-<li><a href="actives.html">Activities</a></li>
+color:white;
 
-<li><a href="contact.html">Contact</a></li>
+font-size:20px;
 
-</ul>
+box-shadow:0 5px 15px rgba(0,0,0,.1);
 
-</nav>
+}
 
-</header>
+/* Sections */
 
-<section class="hero">
+section{
 
-<div class="hero-text">
+width:90%;
 
-<h1>Welcome To</h1>
+max-width:900px;
 
-<h2>🌸 My Portfolio 🌸</h2>
+margin:30px auto;
 
-<p>
+background:white;
 
-Hello! My name is
+padding:30px;
 
-<b>Your Name</b>
+border-radius:25px;
 
-<br><br>
+box-shadow:0 10px 20px rgba(0,0,0,.08);
 
-I am a Grade 12 student.
+transition:.4s;
 
-Welcome to my portfolio website.
+}
 
-This website presents my profile,
+section:hover{
 
-education,
+transform:translateY(-5px);
 
-activities,
+}
 
-achievements,
+/* Profile */
 
-and contact information.
+.profile{
 
-</p>
+text-align:center;
 
-<a href="personal.html" class="btn">
+}
 
-🌷 Learn More
+.profile img{
 
-</a>
+width:180px;
 
-</div>
+height:180px;
 
-<div class="hero-image">
+border-radius:50%;
 
-<img src="images/profile.jpg" alt="Profile">
+object-fit:cover;
 
-</div>
+border:6px solid #ffb6d9;
 
-</section>
+box-shadow:0 10px 20px rgba(255,182,217,.5);
 
-<footer>
+margin-bottom:20px;
 
-<p>
+}
 
-🌸 Thank you for visiting my portfolio 🌸
+h2{
 
-<br>
+color:#ff69b4;
 
-© 2026 My Portfolio
+margin-bottom:15px;
 
-</p>
+}
 
-</footer>
+.card{
 
-</body>
-</html>
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+.card div{
+
+background:#ffe5f1;
+
+padding:15px 25px;
+
+border-radius:15px;
+
+transition:.3s;
+
+font-weight:bold;
+
+}
+
+.card div:hover{
+
+background:#ffb6d9;
+
+color:white;
+
+transform:scale(1.08);
+
+}
+
+footer{
+
+margin-top:40px;
+
+padding:25px;
+
+text-align:center;
+
+background:#ffb6d9;
+
+color:white;
+
+}
+
+/* ดอกไม้ลอย */
+
+body::before{
+
+content:"🌸 🌼 🌷 💖";
+
+font-size:30px;
+
+position:fixed;
+
+top:15px;
+
+right:20px;
+
+animation:float 5s infinite alternate;
+
+}
+
+@keyframes float{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(20px);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:700px){
+
+.card{
+
+flex-direction:column;
+
+}
+
+}
