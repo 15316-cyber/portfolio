@@ -1,13 +1,16 @@
-/* =========================
-   Google Font
-========================= */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* =====================================
+   Portfolio Website
+   Theme : Pastel Pink Sakura
+   Part 1
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap');
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Noto Sans Thai',sans-serif;
 }
 
 html{
@@ -15,54 +18,64 @@ html{
 }
 
 body{
-    background:linear-gradient(180deg,#ffeef5,#fff7fa);
+
+    background:linear-gradient(180deg,#FFF5F9,#FFE7F1,#FFF9FC);
+
     color:#555;
+
     overflow-x:hidden;
+
+    min-height:100vh;
+
 }
 
-/* =========================
-      Sakura Animation
-========================= */
+/* ===========================
+    Sakura Background
+=========================== */
 
 body::before{
-    content:"🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸 🌸";
-    position:fixed;
-    left:-5%;
-    top:-10%;
-    width:110%;
-    font-size:25px;
-    opacity:.35;
-    animation:sakura 18s linear infinite;
-    pointer-events:none;
+
+content:"";
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+background-image:
+
+radial-gradient(circle,#ffc7dd 2px,transparent 2px),
+
+radial-gradient(circle,#ffd8e8 3px,transparent 3px),
+
+radial-gradient(circle,#ffe6ef 2px,transparent 2px);
+
+background-size:
+
+120px 120px,
+
+180px 180px,
+
+240px 240px;
+
+opacity:.35;
+
+z-index:-2;
+
 }
 
-@keyframes sakura{
-
-0%{
-transform:translateY(-100px) rotate(0deg);
-}
-
-100%{
-transform:translateY(120vh) rotate(360deg);
-}
-
-}
-
-/* =========================
-Header
-========================= */
+/* ===========================
+      Header
+=========================== */
 
 header{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-padding:20px 8%;
-
-background:white;
 
 position:sticky;
 
@@ -70,19 +83,43 @@ top:0;
 
 z-index:999;
 
-box-shadow:0 5px 20px rgba(255,170,200,.2);
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 8%;
+
+background:rgba(255,255,255,.35);
+
+backdrop-filter:blur(12px);
+
+-webkit-backdrop-filter:blur(12px);
+
+box-shadow:0 10px 25px rgba(255,180,210,.25);
 
 }
+
+/* ===========================
+Logo
+=========================== */
 
 .logo{
 
-font-size:28px;
+font-size:30px;
 
 font-weight:700;
 
-color:#ff6fa5;
+color:#ff6ca7;
+
+letter-spacing:1px;
 
 }
+
+/* ===========================
+Navigation
+=========================== */
 
 nav ul{
 
@@ -90,37 +127,47 @@ display:flex;
 
 list-style:none;
 
-gap:35px;
+gap:30px;
 
 }
 
-nav a{
+nav ul li a{
 
 text-decoration:none;
 
 color:#666;
 
-font-weight:500;
+font-weight:600;
 
-transition:.3s;
+padding:10px 18px;
+
+border-radius:30px;
+
+transition:.35s;
 
 }
 
-nav a:hover{
+nav ul li a:hover{
 
-color:#ff4f93;
+background:#ffd8e8;
+
+color:#ff4d94;
+
+transform:translateY(-2px);
 
 }
 
 .active{
 
-color:#ff4f93;
+background:#ffb8d2;
+
+color:white !important;
 
 }
 
-/* =========================
-Hero
-========================= */
+/* ===========================
+Hero Section
+=========================== */
 
 .hero{
 
@@ -130,7 +177,9 @@ justify-content:space-between;
 
 align-items:center;
 
-padding:80px 10%;
+padding:90px 10%;
+
+gap:60px;
 
 flex-wrap:wrap;
 
@@ -138,55 +187,77 @@ flex-wrap:wrap;
 
 .hero-text{
 
-max-width:550px;
+flex:1;
+
+min-width:320px;
 
 }
 
-.hero h3{
+.hero-text h3{
 
-color:#ff6fa5;
+font-size:24px;
+
+color:#ff6ca7;
 
 margin-bottom:10px;
 
 }
 
-.hero h1{
+.hero-text h1{
 
 font-size:60px;
 
-margin-bottom:15px;
+color:#ff4d94;
+
+margin-bottom:10px;
 
 }
 
-.hero span{
+.hero-text span{
 
-color:#ff6fa5;
+color:#ff7eb3;
 
 }
 
-.hero h2{
+.hero-text h2{
 
 font-size:28px;
 
-margin-bottom:20px;
+color:#777;
 
-color:#888;
+margin-bottom:20px;
 
 }
 
-.hero p{
+.hero-text p{
 
-line-height:1.8;
+font-size:18px;
+
+line-height:1.9;
 
 margin-bottom:35px;
 
 }
 
+/* ===========================
+Profile Image
+=========================== */
+
+.hero-image{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+}
+
 .hero-image img{
 
-width:360px;
+width:340px;
 
-height:360px;
+height:340px;
 
 object-fit:cover;
 
@@ -194,7 +265,7 @@ border-radius:50%;
 
 border:8px solid white;
 
-box-shadow:0 15px 35px rgba(255,160,190,.4);
+box-shadow:0 15px 35px rgba(255,170,210,.4);
 
 transition:.5s;
 
@@ -202,13 +273,18 @@ transition:.5s;
 
 .hero-image img:hover{
 
-transform:scale(1.05);
+transform:scale(1.05) rotate(2deg);
 
 }
+/* =====================================
+   Portfolio Website
+   Theme : Pastel Pink Sakura
+   Part 2
+===================================== */
 
-/* =========================
-Buttons
-========================= */
+/* ===========================
+    Button
+=========================== */
 
 .button-group{
 
@@ -216,63 +292,77 @@ display:flex;
 
 gap:20px;
 
+flex-wrap:wrap;
+
 }
 
 .btn{
 
-background:#ff8db7;
+display:inline-block;
 
-padding:14px 30px;
+padding:14px 32px;
 
-border-radius:30px;
+background:#ff8db8;
 
 color:white;
 
 text-decoration:none;
 
+border-radius:40px;
+
 font-weight:600;
 
-transition:.4s;
+box-shadow:0 8px 20px rgba(255,160,190,.35);
+
+transition:.35s;
 
 }
 
 .btn:hover{
 
-background:#ff5f99;
+background:#ff6aa2;
 
 transform:translateY(-5px);
+
+box-shadow:0 15px 30px rgba(255,140,180,.45);
 
 }
 
 .btn-outline{
 
-padding:14px 30px;
+display:inline-block;
 
-border:2px solid #ff8db7;
+padding:14px 32px;
 
-border-radius:30px;
+border:2px solid #ff8db8;
+
+border-radius:40px;
 
 text-decoration:none;
 
-color:#ff5f99;
-
 font-weight:600;
 
-transition:.4s;
+color:#ff6aa2;
+
+background:white;
+
+transition:.35s;
 
 }
 
 .btn-outline:hover{
 
-background:#ff8db7;
+background:#ff8db8;
 
 color:white;
 
+transform:translateY(-5px);
+
 }
 
-/* =========================
-Section
-========================= */
+/* ===========================
+    ทุก Section
+=========================== */
 
 section{
 
@@ -284,135 +374,286 @@ section h2{
 
 text-align:center;
 
-font-size:35px;
+font-size:38px;
 
-color:#ff6fa5;
+color:#ff6aa2;
 
 margin-bottom:45px;
 
 }
 
-/* =========================
-About
-========================= */
+/* ===========================
+    About Me
+=========================== */
 
 .about-box{
 
-background:white;
+background:rgba(255,255,255,.75);
 
-padding:40px;
+backdrop-filter:blur(12px);
 
-border-radius:25px;
+padding:45px;
 
-box-shadow:0 10px 30px rgba(255,170,200,.2);
+border-radius:30px;
 
-text-align:center;
+box-shadow:0 15px 30px rgba(255,180,205,.25);
 
 line-height:2;
 
+text-align:center;
+
+transition:.35s;
+
 }
 
-/* =========================
-Cards
-========================= */
+.about-box:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* ===========================
+    Skills
+=========================== */
 
 .card-container{
 
-display:flex;
+display:grid;
 
-justify-content:center;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-gap:30px;
-
-flex-wrap:wrap;
+gap:28px;
 
 }
 
 .card{
 
-width:260px;
-
 background:white;
 
 padding:35px;
 
-border-radius:25px;
+border-radius:28px;
 
 text-align:center;
 
-transition:.4s;
+box-shadow:0 12px 25px rgba(255,180,205,.25);
 
-box-shadow:0 10px 30px rgba(255,180,200,.25);
+transition:.35s;
+
+cursor:pointer;
 
 }
 
 .card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-10px) scale(1.03);
 
-}
-
-.card i{
-
-font-size:45px;
-
-color:#ff73a9;
-
-margin-bottom:20px;
+box-shadow:0 18px 35px rgba(255,170,200,.35);
 
 }
 
 .card h3{
 
+color:#ff6aa2;
+
 margin-bottom:15px;
 
-color:#ff6fa5;
+font-size:22px;
 
 }
 
-/* =========================
-Goal
-========================= */
+.card p{
+
+line-height:1.8;
+
+}
+
+/* ===========================
+    Goal
+=========================== */
 
 .goal-content{
 
-background:#fff;
+background:white;
 
-padding:40px;
+padding:45px;
 
-border-radius:25px;
+border-radius:30px;
 
 text-align:center;
 
 line-height:2;
 
-box-shadow:0 10px 30px rgba(255,170,200,.2);
+box-shadow:0 15px 30px rgba(255,180,205,.25);
+
+transition:.35s;
 
 }
 
-/* =========================
-Footer
-========================= */
+.goal-content:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* ===========================
+    Footer
+=========================== */
 
 footer{
 
-background:#ffb6cf;
+margin-top:60px;
 
-padding:25px;
+background:#ffb8d3;
+
+padding:30px;
 
 text-align:center;
 
 color:white;
 
-margin-top:50px;
+font-size:16px;
+
+letter-spacing:1px;
 
 }
 
-/* =========================
-Responsive
-========================= */
+/* ===========================
+    Scrollbar
+=========================== */
 
-@media(max-width:900px){
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#fff3f8;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#ff9fc6;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#ff75ac;
+
+}
+/* =====================================
+   Portfolio Website
+   Theme : Pastel Pink Sakura
+   Part 3
+===================================== */
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fadeUp{
+
+0%{
+opacity:0;
+transform:translateY(40px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.hero,
+.about,
+.skills,
+.goal{
+
+animation:fadeUp 1s ease;
+
+}
+
+/* ===========================
+   Hover Effect
+=========================== */
+
+img{
+
+transition:.4s;
+
+}
+
+img:hover{
+
+filter:brightness(1.05);
+
+}
+
+h1,h2,h3{
+
+transition:.3s;
+
+}
+
+h1:hover,
+h2:hover{
+
+color:#ff5b98;
+
+}
+
+/* ===========================
+   Floating Decoration
+=========================== */
+
+body::after{
+
+content:"🌸";
+
+position:fixed;
+
+right:30px;
+
+bottom:20px;
+
+font-size:35px;
+
+animation:flower 3s ease-in-out infinite;
+
+pointer-events:none;
+
+opacity:.6;
+
+}
+
+@keyframes flower{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-10px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+/* ===========================
+   Responsive Tablet
+=========================== */
+
+@media(max-width:992px){
 
 .hero{
 
@@ -422,19 +663,17 @@ text-align:center;
 
 }
 
-.hero-image img{
+.hero-text{
 
-width:280px;
-
-height:280px;
-
-margin-bottom:30px;
+max-width:100%;
 
 }
 
-.hero h1{
+.hero-image img{
 
-font-size:45px;
+width:270px;
+
+height:270px;
 
 }
 
@@ -442,28 +681,151 @@ font-size:45px;
 
 justify-content:center;
 
-flex-wrap:wrap;
+}
 
 }
 
-nav ul{
+/* ===========================
+   Responsive Mobile
+=========================== */
 
-gap:15px;
-
-font-size:14px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
+@media(max-width:768px){
 
 header{
 
 flex-direction:column;
 
-gap:15px;
+padding:15px;
 
 }
+
+nav ul{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:10px;
+
+}
+
+nav ul li a{
+
+font-size:14px;
+
+padding:8px 14px;
+
+}
+
+.hero{
+
+padding:60px 8%;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+.hero h2{
+
+font-size:22px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+section{
+
+padding:60px 8%;
+
+}
+
+section h2{
+
+font-size:30px;
+
+}
+
+.card-container{
+
+grid-template-columns:1fr;
+
+}
+
+.about-box,
+.goal-content{
+
+padding:30px;
+
+}
+
+footer{
+
+font-size:14px;
+
+}
+
+}
+
+/* ===========================
+   Large Screen
+=========================== */
+
+@media(min-width:1400px){
+
+.hero{
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+section{
+
+max-width:1400px;
+
+margin:auto;
+
+}
+
+}
+
+/* ===========================
+   Smooth Card Shadow
+=========================== */
+
+.card,
+.about-box,
+.goal-content{
+
+border:1px solid rgba(255,220,235,.8);
+
+}
+
+.card:hover,
+.about-box:hover,
+.goal-content:hover{
+
+border-color:#ff9fc6;
+
+}
+
+/* ===========================
+   Selection Color
+=========================== */
+
+::selection{
+
+background:#ff9fc6;
+
+color:white;
 
 }
