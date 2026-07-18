@@ -865,3 +865,73 @@ color:white;
 }
 
 }
+/* ===========================
+   PERSONAL PAGE
+=========================== */
+
+.personal-page{
+    max-width:1100px;
+    margin:auto;
+    padding:120px 20px 60px;
+}
+
+.personal-page h1{
+    text-align:center;
+    color:#ff5fa2;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.personal-card{
+    background:#fff;
+    border-radius:30px;
+    padding:40px;
+    display:flex;
+    gap:40px;
+    align-items:center;
+    box-shadow:0 10px 30px rgba(255,182,193,.35);
+    transition:.3s;
+}
+
+.personal-card:hover{
+    transform:translateY(-8px);
+}
+
+.personal-img img{
+    width:300px;
+    height:300px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid #ffd6e8;
+}
+
+.personal-info{
+    flex:1;
+}
+
+.personal-info h2{
+    color:#ff5fa2;
+    margin-bottom:20px;
+    font-size:36px;
+}
+
+.personal-info p{
+    font-size:20px;
+    color:#666;
+    margin:12px 0;
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+.personal-card{
+    flex-direction:column;
+    text-align:center;
+}
+
+.personal-img img{
+    width:220px;
+    height:220px;
+}
+
+}
