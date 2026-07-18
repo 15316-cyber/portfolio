@@ -989,3 +989,63 @@ color:white;
     text-align:center;
     line-height:1.7;
 }
+/* ---------- Contact ---------- */
+
+.contact-page{
+    padding:70px 10%;
+    text-align:center;
+}
+
+.contact-page h1{
+    color:#ff5fa2;
+    font-size:52px;
+    margin-bottom:10px;
+}
+
+.contact-subtitle{
+    color:#666;
+    margin-bottom:50px;
+    font-size:20px;
+}
+
+.contact-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.contact-item{
+    background:#fff;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(255,182,193,.35);
+    transition:.3s;
+}
+
+.contact-item:hover{
+    transform:translateY(-8px);
+}
+
+.contact-item .icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.contact-item h3{
+    color:#ff5fa2;
+    margin-bottom:10px;
+}
+
+.contact-item p{
+    color:#555;
+    font-size:18px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    margin-top:60px;
+    background:#ffe8f2;
+    color:#ff5fa2;
+    font-weight:bold;
+}
