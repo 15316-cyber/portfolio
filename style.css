@@ -870,6 +870,8 @@ color:white;
    PERSONAL PAGE
 =========================== */
 
+<link rel="stylesheet" href="style.css">
+
 .personal-page{
     max-width:1100px;
     margin:auto;
